@@ -50,9 +50,11 @@ Since increasing the number of estimators in the previous model did not achieve 
 A second Random Forests model was instantiated with the binary classifications using 200 estimators. An accuracy score of .89 was attained with the binary model. 
 
 Feature Importance:
+
 The project also explores the feature importance of the Random Forest model. The `feature_importances_` attribute is used to retrieve the importance scores for each feature. The features are then sorted based on their importance and visualized using a horizontal bar plot.
 
 Conclusion:
+
 This project demonstrates the application of the Random Forest algorithm for predicting wine quality based on chemical properties. The first model achieved a poor accuracy score due to imbalanced classes. After recategorizing the data into binary classes for wine quality, the second model performed substantially better.
 
 The project provides a solid foundation for understanding the process of training and evaluating a Random Forest model for wine quality prediction.
