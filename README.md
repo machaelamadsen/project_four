@@ -58,3 +58,7 @@ Conclusion:
 This project demonstrates the application of the Random Forest algorithm for predicting wine quality based on chemical properties. The first model achieved a poor accuracy score due to imbalanced classes. After recategorizing the data into binary classes for wine quality, the second model performed substantially better.
 
 The project provides a solid foundation for understanding the process of training and evaluating a Random Forest model for wine quality prediction.
+
+Sources:
+https://www.dataquest.io/blog/tutorial-add-column-pandas-dataframe-based-on-if-else-condition/
+
