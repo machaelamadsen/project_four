@@ -34,14 +34,17 @@ Model 1 Training and Evaluation:
 5. The classification report is generated to provide detailed metrics for each quality class.
 
 Model 1 Optimization:
+
 In an attempt to improve the model's performance, the number of estimators in the Random Forest classifier is increased to 1000. The model is retrained with the updated parameters, and the evaluation metrics are recalculated.
 
 Model 1 Results:
+
 The initial Random Forest model with 200 estimators achieves an accuracy score of approximately 0.67. The confusion matrix and classification report provide insights into the model's performance for each quality class. The model performs well in predicting quality ratings of 5, 6, and 7, but struggles with the less frequent classes (3, 4, 8, and 9).
 
 After increasing the number of estimators to 1000, the accuracy score slightly improves to approximately 0.68. However, the model still has difficulty predicting the less frequent quality classes accurately.
 
 Model 2:
+
 Since increasing the number of estimators in the previous model did not achieve a target accuracy score of .75 or higher, a different approach was taken to group the wine into binary classes: good (rating of 7 or higher) and bad (rating less than 7).
 
 A second Random Forests model was instantiated with the binary classifications using 200 estimators. An accuracy score of .89 was attained with the binary model. 
