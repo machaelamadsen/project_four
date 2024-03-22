@@ -62,5 +62,6 @@ The project provides a solid foundation for understanding the process of trainin
 Sources:
 
 https://www.kaggle.com/code/margijiyani1/notebook093682bdb/input?select=winequality_white.csv
+
 https://www.dataquest.io/blog/tutorial-add-column-pandas-dataframe-based-on-if-else-condition/
 
