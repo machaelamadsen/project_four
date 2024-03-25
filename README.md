@@ -65,3 +65,4 @@ https://www.kaggle.com/code/margijiyani1/notebook093682bdb/input?select=winequal
 
 https://www.dataquest.io/blog/tutorial-add-column-pandas-dataframe-based-on-if-else-condition/
 
+Link to Presentation: https://docs.google.com/presentation/d/1D_0GlKvrI3_fMi7zgD_YqZJf3nEujUL4CcSmm1mMUkM/edit#slide=id.p
