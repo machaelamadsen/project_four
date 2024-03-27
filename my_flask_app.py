@@ -7,25 +7,20 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 app = Flask(__name__)
 
-# Load the dataset
 wine = pd.read_csv('winequality_red.csv')
 
-# Define predictors and target variable
 Predictors = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
               'chlorides', 'free sulfur dioxide', 'total sulfur dioxide',
               'density', 'pH', 'sulphates', 'alcohol']
 TargetVariable = 'quality'
 
-# Handling missing values
 imputer = SimpleImputer(strategy='mean')
 X = wine[Predictors].values
 X_imputed = imputer.fit_transform(X)
 
-# Scaling data
 scaler = MinMaxScaler(feature_range=(1, 10))  # Scale to 1-10 range
 X_scaled = scaler.fit_transform(X_imputed)
 
-# Model initialization and training
 RegModel = KNeighborsRegressor(n_neighbors=2)
 y = wine[TargetVariable].values
 y_scaled = ((y - y.min()) / (y.max() - y.min())) * 9 + 1  # Scale to 1-10 range
@@ -52,19 +47,14 @@ def predict():
                 input_data.append(np.nan)
         input_data = np.array(input_data).reshape(1, -1)
         
-        # Impute missing values
         input_data_imputed = imputer.transform(input_data)
         
-        # Scale input data
         input_data_scaled = scaler.transform(input_data_imputed)
         
-        # Make prediction
         prediction_scaled = RegModel.predict(input_data_scaled)[0]
         
-        # Map scaled prediction to 1-10 range
         prediction = ((prediction_scaled - 1) / 9) * (y.max() - y.min()) + y.min()
         
-        # Display the scaled quality value directly
         return render_template('result.html', quality="{:.2f}".format(prediction))
     except Exception as e:
         error_message = str(e)
